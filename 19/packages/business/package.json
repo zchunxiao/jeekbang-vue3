@@ -1,0 +1,32 @@
+{
+  "name": "@my/business",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.mjs",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./esm/*": {
+      "import": "./dist/esm/*/index.mjs",
+      "types": "./dist/esm/*/index.d.ts"
+    },
+    "./cjs/*": {
+      "require": "./dist/cjs/*/index.cjs",
+      "types": "./dist/cjs/*/index.d.ts"
+    },
+    "./css/*": "./dist/css/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.4",
+  "dependencies": {
+    "@my/components": "workspace:^",
+    "vue": "^3.5.13"
+  }
+}

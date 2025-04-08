@@ -1,0 +1,30 @@
+{
+  "name": "@my/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs"
+    },
+    "./esm/*": {
+      "import": "./dist/esm/*/index.mjs",
+      "types": "./dist/esm/*/index.d.ts"
+    },
+    "./cjs/*": {
+      "require": "./dist/cjs/*/index.cjs",
+      "types": "./dist/cjs/*/index.d.ts"
+    },
+    "./css/*": "./dist/css/*"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.4",
+  "dependencies": {
+    "vue": "^3.5.13"
+  }
+}
